@@ -24,6 +24,9 @@ Interface.on('line', (input) => {
 	case 'postPublication':
 	  consumer.postPublication();
     break;
+  case 'close':
+    consumer.close();
+    break;
 	default:
 	  console.log("Invalid command!");
 	  break;
@@ -101,8 +104,8 @@ class mediumApiConsumer {
                 },
               }, (error, res, body) => {
                 if (!error && res.statusCode===201) {
-                  var parsedData = JSON.parse(body).data;
-                  console.log(`Published ${parsedData.title} at ${parsedData.url}`);
+                  var parsedData = body.data;
+                  console.log(`Published ${parsedData["title"]} at ${parsedData["url"]}`);
                 }
                 else {
                   console.log(error, res.statusCode);
@@ -113,6 +116,13 @@ class mediumApiConsumer {
         });
       });
     });
+  }
+
+  close() {
+    delete this;
+    console.log('Bye');
+    Interface.close();
+    process.exit(0);
   }
 } 
 
