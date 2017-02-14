@@ -1,0 +1,23 @@
+{
+  "name": "daytwo",
+  "version": "1.0.0",
+  "description": "This Home session embeddes a function that counts the number of occurences of words in a string, it also creates a function that returns the reverse of a string and a command line application that consumes a public API using HTTP client library.",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imisioluwa/daytwo.git"
+  },
+  "author": "Akande Imisioluwa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Imisioluwa/daytwo/issues"
+  },
+  "homepage": "https://github.com/Imisioluwa/daytwo#readme"
+}
